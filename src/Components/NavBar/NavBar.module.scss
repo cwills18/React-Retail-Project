@@ -1,0 +1,61 @@
+@import "./../../Styles/variables.scss";
+
+.NavHolder {
+	width: 100%;
+}
+
+.DesktopNav {
+	background-color: $green;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 0.5em 0.7em 0.6em;
+	&_Tabs {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		&_Img {
+			height: 40px;
+		}
+		&_TextLink {
+			text-decoration: none;
+			font-family: $default;
+			font-weight: 500;
+			font-size: 1.2em;
+			color: white;
+			margin: 0em 3em;
+		}
+	}
+	&_SearchContainer {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		margin: 0em 1em;
+	}
+	&_CartContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		align-items: center;
+		padding-left: 1em;
+		&_Default {
+			display: none;
+		}
+		&_Num {
+			background-color: $purple;
+			color: white;
+			padding: 5px;
+			min-width: 15px;
+			border-radius: 50%;
+			font-family: $default;
+			font-weight: 800;
+			font-size: 0.8em;
+			align-self: first baseline;
+			text-align: center;
+		}
+		&_Img {
+			height: 35px;
+		}
+	}
+}
