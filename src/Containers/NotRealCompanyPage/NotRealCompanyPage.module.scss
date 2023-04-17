@@ -1,0 +1,29 @@
+@import "./../../Styles/variables.scss";
+
+.Page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Heading {
+	color: $orange;
+	font-family: $silly;
+	font-size: 3em;
+	margin: 1em 0em;
+}
+
+.Para {
+	color: $orange;
+	font-family: $default;
+	font-size: 1.5em;
+	width: 50%;
+	text-align: center;
+}

@@ -19,11 +19,11 @@
 		}
 		&_TextLink {
 			text-decoration: none;
-			font-family: $default;
+			font-family: $silly;
 			font-weight: 500;
-			font-size: 1.2em;
+			font-size: 1.4em;
 			color: white;
-			margin: 0em 3em;
+			margin: 0em 2em;
 		}
 	}
 	&_SearchContainer {
@@ -39,6 +39,7 @@
 		justify-content: flex-end;
 		align-items: center;
 		padding-left: 1em;
+		height: 100%;
 		&_Default {
 			display: none;
 		}
@@ -56,6 +57,8 @@
 		}
 		&_Img {
 			height: 35px;
+			align-self: flex-end;
+			padding-bottom: 3px;
 		}
 	}
 }
