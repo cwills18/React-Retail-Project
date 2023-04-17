@@ -1,0 +1,45 @@
+@import "./../../Styles/variables.scss";
+
+.Products {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+
+.ProductGrid {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 2em 0em;
+}
+
+.PageSelector {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 98%;
+	height: 40px;
+	border-top: 1px solid $light-grey;
+	&_Text {
+		font-family: $default;
+		font-size: 1em;
+		font-weight: 300;
+		letter-spacing: 0.05em;
+		margin: 1em;
+	}
+	&_Btn {
+		margin: 0.5em;
+		background-color: white;
+		border: none;
+		font-family: $default;
+		font-size: 1.5em;
+		font-weight: 200;
+		&:hover {
+			color: $purple;
+			font-weight: 800;
+		}
+	}
+}
