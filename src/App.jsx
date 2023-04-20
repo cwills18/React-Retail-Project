@@ -12,8 +12,8 @@ import NotRealCompanyPage from "./Containers/NotRealCompanyPage/NotRealCompanyPa
 
 function App() {
 	return (
-		<SearchProvider>
-			<ProductsProvider>
+		<ProductsProvider>
+			<SearchProvider>
 				<ShoppingCartProvider>
 					<HashRouter>
 						<div className="App"></div>
@@ -26,8 +26,8 @@ function App() {
 						</Routes>
 					</HashRouter>
 				</ShoppingCartProvider>
-			</ProductsProvider>
-		</SearchProvider>
+			</SearchProvider>
+		</ProductsProvider>
 	);
 }
 

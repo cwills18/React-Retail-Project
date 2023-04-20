@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import NavBar from "../../Components/NavBar/NavBar";
-import ProductCardDetailed from "../../Components/ProductCardDetailed/ProductCardDetailed";
+import ProductCardDetailed from "../ProductCardDetailed/ProductCardDetailed";
 import Footer from "../../Components/Footer/Footer";
 import { ProductsContext } from "../../Contexts/ProductsProvider";
 import styles from "./ProductPage.module.scss";

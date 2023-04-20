@@ -4,9 +4,8 @@ export const ProductsContext = createContext();
 
 const ProductsProvider = ({ children }) => {
 	const [products, setProducts] = useState([]);
-	const [foundItemCount, setFoundItemCount] = useState(0);
 
-	const toPass = { products, setProducts, foundItemCount, setFoundItemCount };
+	const toPass = { products, setProducts };
 
 	return <ProductsContext.Provider value={toPass}>{children}</ProductsContext.Provider>;
 };
