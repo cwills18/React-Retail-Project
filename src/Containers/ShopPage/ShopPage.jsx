@@ -6,17 +6,20 @@ import Footer from "../../Components/Footer/Footer";
 import AddProductForm from "../../Components/AddProductForm/AddProductForm";
 import { ProductsContext } from "../../Contexts/ProductsProvider";
 import { getAllProducts } from "../../Services/products";
-import ProductGrid from "../../Components/ProductGrid/ProductGrid";
+import ProductGridContainer from "../ProductGridContainer/ProductGridContainer";
+import { SearchContext } from "../../Contexts/SearchProvider";
 
 const ShopPage = () => {
-	const { products, setProducts, setFoundItemCount } = useContext(ProductsContext);
+	const { products, setProducts } = useContext(ProductsContext);
+	const { matchedItems, setMatchedItems, setFoundItemCount } = useContext(SearchContext);
 
 	useEffect(() => {
 		const loadAll = async () => {
 			const data = await getAllProducts();
 			setProducts(data);
-			setFoundItemCount(data.length);
-			console.log(data);
+			if (matchedItems.length === 0) {
+				setFoundItemCount(data.length);
+			}
 		};
 		loadAll();
 	}, []);
@@ -25,7 +28,7 @@ const ShopPage = () => {
 		<div className={styles.ShopPage}>
 			<NavBar className={styles.NavBar} />
 			<ItemsFound />
-			<ProductGrid />
+			<ProductGridContainer />
 			<Footer />
 		</div>
 	);

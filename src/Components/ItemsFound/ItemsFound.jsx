@@ -1,11 +1,15 @@
 import React, { useContext } from "react";
 import styles from "./ItemsFound.module.scss";
-import { ProductsContext } from "../../Contexts/ProductsProvider";
+import { SearchContext } from "../../Contexts/SearchProvider";
 
 const ItemsFound = () => {
-	const { foundItemCount } = useContext(ProductsContext);
+	const { foundItemCount } = useContext(SearchContext);
 
-	return <div className={styles.ItemsFound}>{foundItemCount} Items Found</div>;
+	return (
+		<div className={styles.ItemsFound}>
+			{foundItemCount} Item{foundItemCount > 1 ? "s" : ""} Found
+		</div>
+	);
 };
 
 export default ItemsFound;

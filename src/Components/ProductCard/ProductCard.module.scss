@@ -4,22 +4,32 @@
 	border: 1px solid $light-grey;
 	border-radius: 8px;
 	width: 18%;
+	height: 490px;
 	margin: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
+	position: relative;
 }
 
-.ProductImg {
-	width: 100%;
+.ProductImgHolder {
+	height: 300px;
+	overflow: hidden;
+	&_Img {
+		width: 260px;
+		max-width: 100%;
+		height: 300px;
+		overflow: hidden;
+		border-radius: 7px 7px 0px 0px;
+	}
 }
 
 .ProductName {
 	font-family: $silly;
 	color: $orange;
 	font-size: 1.5em;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.1em;
 	margin: 0.25em;
 	text-align: center;
 }
@@ -37,6 +47,8 @@
 	flex-direction: column;
 	text-decoration: none;
 	align-items: center;
+	position: absolute;
+	bottom: 0;
 }
 
 .BuyNow {

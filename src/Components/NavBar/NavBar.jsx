@@ -3,10 +3,11 @@ import { NavLink } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./NavBar.module.scss";
 import { ShoppingCartContext } from "../../Contexts/ShoppingCartProvider";
+import { SearchContext } from "../../Contexts/SearchProvider";
 
 const NavBar = () => {
 	const { cartCount } = useContext(ShoppingCartContext);
-
+	const { resetSearch } = useContext(SearchContext);
 	useEffect(() => {}, [cartCount]);
 
 	return (
@@ -19,7 +20,7 @@ const NavBar = () => {
 					<NavLink to={"/"}>
 						<img className={styles.DesktopNav_Tabs_Img} src="src/assets/sillySocksLogo.png" />
 					</NavLink>
-					<NavLink to={"/shop"} className={styles.DesktopNav_Tabs_TextLink}>
+					<NavLink to={"/shop"} className={styles.DesktopNav_Tabs_TextLink} onClick={resetSearch}>
 						SHOP
 					</NavLink>
 				</div>
