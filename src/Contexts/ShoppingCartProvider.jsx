@@ -3,9 +3,10 @@ import React, { createContext, useState } from "react";
 export const ShoppingCartContext = createContext();
 
 const ShoppingCartProvider = ({ children }) => {
-	const [cartCount, setCartCount] = useState(0);
+	const [totalCartCount, setTotalCartCount] = useState(0);
+	const [cartProducts, setCardProducts] = useState([]);
 
-	const toPass = { cartCount, setCartCount };
+	const toPass = { totalCartCount, setTotalCartCount };
 
 	return <ShoppingCartContext.Provider value={toPass}>{children}</ShoppingCartContext.Provider>;
 };

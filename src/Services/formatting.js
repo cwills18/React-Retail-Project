@@ -8,7 +8,11 @@ export const formatPrice = (price) => {
 		if (hasOneDecimal) {
 			return `${price}0`;
 		} else {
-			return price;
+			return Math.round(price * 100) / 100;
 		}
 	}
+};
+
+export const makeSentenceCase = (string) => {
+	return string.charAt(0).toUpperCase() + string.slice(1, string.length);
 };

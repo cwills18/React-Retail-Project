@@ -1,27 +1,63 @@
 @import "./../../Styles/variables.scss";
 
 .ProductCard {
-	border: 1px solid $light-grey;
+	border: 1.2px solid $light-grey;
 	border-radius: 8px;
-	width: 18%;
 	height: 490px;
-	margin: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
 	position: relative;
+	background-color: white;
 }
 
 .ProductImgHolder {
 	height: 300px;
-	overflow: hidden;
+	// overflow: hidden;
 	&_Img {
-		width: 260px;
+		width: 290px;
 		max-width: 100%;
 		height: 300px;
 		overflow: hidden;
 		border-radius: 7px 7px 0px 0px;
+	}
+}
+
+.Favourited {
+	&_Container {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		width: 50px;
+		height: 50px;
+		background: linear-gradient(to top right, transparent 0%, transparent 50%, $orange 50%, $orange 100%);
+		border-radius: 0px 7px 0px 0px;
+	}
+	&_Star {
+		&_Checked {
+			color: black;
+			position: absolute;
+			font-size: 1.2em;
+			right: 5px;
+			&:hover,
+			:active,
+			:visited {
+				color: white;
+			}
+		}
+		&_Unchecked {
+			color: white;
+			position: absolute;
+			font-size: 1.2em;
+			right: 5px;
+			&:hover,
+			:active,
+			:visited {
+				color: black;
+			}
+		}
 	}
 }
 

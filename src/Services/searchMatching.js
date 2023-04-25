@@ -2,21 +2,22 @@ export const foundInName = (searchInput, obj) => {
 	const searchTerms = searchInput.toLowerCase().split(" ");
 	const name = obj.name.toLowerCase();
 	const result1 = searchTerms.some((search) => name.includes(search));
-	//check if word was plural and needs to be singular
-	const result2 = searchTerms.some((search) => name.includes(search.slice(0, search.length - 1)));
 	//check if word was singular and needs to be plural
-	const result3 = searchTerms.some((search) => name.includes(search + "s"));
+	const result2 = searchTerms.some((search) => name.includes(search + "s"));
+	//check if word was plural and needs to be singular
+	const result3 = getSingularWords(searchTerms).some((search) => name.includes(search));
 	return result1 || result2 || result3;
 };
 
 export const foundInDescription = (searchInput, obj) => {
+	console.log(obj.name);
 	const searchTerms = searchInput.toLowerCase().split(" ");
-	const description = obj.description.toLowerCase();
-	const result1 = searchTerms.some((search) => description.includes(search));
-	//check if word was plural and needs to be singular
-	const result2 = searchTerms.some((search) => description.includes(search.slice(0, search.length - 1)));
+	const descriptionArray = obj.description.toLowerCase().split(" ");
+	const result1 = searchTerms.some((search) => descriptionArray.includes(search));
 	//check if word was singular and needs to be plural
-	const result3 = searchTerms.some((search) => description.includes(search + "s"));
+	const result2 = searchTerms.some((search) => descriptionArray.includes(search + "s"));
+	//check if word was plural and needs to be singular
+	const result3 = getSingularWords(searchTerms).some((search) => descriptionArray.includes(search));
 	return result1 || result2 || result3;
 };
 
@@ -38,4 +39,16 @@ export const foundInColours = (searchInput, obj) => {
 		const result = searchTerms.some((search) => colours.includes(search));
 		return result;
 	}
+};
+
+const getSingularWords = (stringArray) => {
+	let singularWords = [];
+	stringArray.forEach((search) => {
+		if (search.charAt(search.length - 1) === "s") {
+			singularWords.push(search.slice(0, search.length - 1));
+		} else {
+			singularWords.push(search);
+		}
+	});
+	return singularWords;
 };

@@ -7,7 +7,7 @@ const ItemsFound = () => {
 
 	return (
 		<div className={styles.ItemsFound}>
-			{foundItemCount} Item{foundItemCount > 1 ? "s" : ""} Found
+			{foundItemCount} Item{foundItemCount === 1 ? "" : "s"} Found
 		</div>
 	);
 };
