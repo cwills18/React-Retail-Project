@@ -4,11 +4,12 @@ import SearchBar from "../SearchBar/SearchBar";
 import styles from "./NavBar.module.scss";
 import { ShoppingCartContext } from "../../Contexts/ShoppingCartProvider";
 import { SearchContext } from "../../Contexts/SearchProvider";
+import { UserContext } from "../../Contexts/UserProvider";
 
 const NavBar = () => {
-	const { cartCount } = useContext(ShoppingCartContext);
+	const { totalCartCount } = useContext(ShoppingCartContext);
 	const { resetSearch } = useContext(SearchContext);
-	useEffect(() => {}, [cartCount]);
+	useEffect(() => {}, [totalCartCount]);
 
 	return (
 		<div className={styles.NavHolder}>
@@ -27,9 +28,12 @@ const NavBar = () => {
 				<div className={styles.DesktopNav_SearchContainer}>
 					<SearchBar className={styles.DesktopNav_SearchContainer_SearchBar} />
 				</div>
+				<NavLink to={"/saved-items"}>
+					<div className={styles.DesktopNav_SavedItems}>&#9733;</div>
+				</NavLink>
 				<NavLink to="/checkout">
 					<div className={styles.DesktopNav_CartContainer}>
-						{cartCount > 0 && <div className={styles.DesktopNav_CartContainer_Num}>{cartCount}</div>}
+						{totalCartCount > 0 && <div className={styles.DesktopNav_CartContainer_Num}>{totalCartCount}</div>}
 						<img className={styles.DesktopNav_CartContainer_Img} src="src/assets/shoppingcart.png" />
 					</div>
 				</NavLink>

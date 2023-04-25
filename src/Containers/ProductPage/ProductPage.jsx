@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import NavBar from "../../Components/NavBar/NavBar";
 import ProductCardDetailed from "../ProductCardDetailed/ProductCardDetailed";
@@ -11,15 +11,15 @@ const ProductPage = () => {
 	console.log(products);
 	const { id } = useParams();
 	console.log(id);
-	const targetProduct = products.find((x) => x.id === id);
-	console.log(targetProduct);
+	const product = products.find((product) => product.id === id);
+
 	return (
 		<div className={styles.Page}>
 			<NavBar />
 			<NavLink to="/shop" className={styles.BackBtn}>
 				&lt; &lt; Back
 			</NavLink>
-			<ProductCardDetailed product={targetProduct} />
+			<ProductCardDetailed product={product} />
 			<Footer />
 		</div>
 	);

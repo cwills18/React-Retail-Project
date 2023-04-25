@@ -10,9 +10,11 @@ const Footer = () => {
 					<h4 className={styles.Main_Subheading}>STAY INFORMED</h4>
 					<div className={styles.Subscribe_Signup}>
 						<input className={styles.Subscribe_Signup_Input} type="text" />
-						<button className={styles.Subscribe_Signup_Button} type="submit">
-							Sign Up
-						</button>
+						<NavLink to="/not-a-real-company">
+							<button className={styles.Subscribe_Signup_Button} type="submit">
+								Sign Up
+							</button>
+						</NavLink>
 					</div>
 					<p className={styles.Main_Para}>
 						By entering your email address and submitting this form, you consent to receive emails (such as

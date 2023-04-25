@@ -8,7 +8,6 @@ import styles from "./ProductGridContainer.module.scss";
 const ProductGridContainer = () => {
 	const { products } = useContext(ProductsContext);
 	const { matchedItems, failedSearch, setFailedSearch, foundItemCount, setFoundItemCount } = useContext(SearchContext);
-
 	const [pageNum, setPageNum] = useState(0);
 
 	const handlePageIncrement = () => {

@@ -1,5 +1,9 @@
 @import "./../../Styles/variables.scss";
 
+a {
+	text-decoration: none;
+}
+
 .NavHolder {
 	width: 100%;
 }
@@ -32,6 +36,14 @@
 		flex-direction: row;
 		align-items: center;
 		margin: 0em 1em;
+	}
+	&_SavedItems {
+		color: white;
+		text-decoration: none;
+		font-size: 2em;
+		padding-left: 0.5em;
+		position: relative;
+		top: 2px;
 	}
 	&_CartContainer {
 		display: flex;

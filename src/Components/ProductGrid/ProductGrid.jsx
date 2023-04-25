@@ -11,7 +11,11 @@ const ProductGrid = ({ products, pageNum }) => {
 					products
 						.filter((x, index) => index >= pageNum * 50 && index < (pageNum + 1) * 50)
 						.map((product) => {
-							return <ProductCard key={product.id} product={product} />;
+							return (
+								<div className={styles.ProductCard} key={product.id}>
+									<ProductCard product={product} />
+								</div>
+							);
 						})}
 			</div>
 		</div>
