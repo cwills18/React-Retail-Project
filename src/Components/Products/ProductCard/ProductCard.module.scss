@@ -1,0 +1,104 @@
+@import "./../../../Styles/variables.scss";
+
+.ProductCard {
+	border: 1.2px solid $light-grey;
+	border-radius: 8px;
+	height: 490px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	position: relative;
+	background-color: white;
+}
+
+.ProductImgHolder {
+	height: 300px;
+	// overflow: hidden;
+	&_Img {
+		width: 290px;
+		max-width: 100%;
+		height: 300px;
+		overflow: hidden;
+		border-radius: 7px 7px 0px 0px;
+	}
+}
+
+.Favourited {
+	&_Container {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		width: 50px;
+		height: 50px;
+		background: linear-gradient(to top right, transparent 0%, transparent 50%, $orange 50%, $orange 100%);
+		border-radius: 0px 7px 0px 0px;
+	}
+	&_Star {
+		&_Checked {
+			color: black;
+			position: absolute;
+			font-size: 1.2em;
+			right: 5px;
+			&:hover,
+			:active,
+			:visited {
+				color: white;
+			}
+		}
+		&_Unchecked {
+			color: white;
+			position: absolute;
+			font-size: 1.2em;
+			right: 5px;
+			&:hover,
+			:active,
+			:visited {
+				color: black;
+			}
+		}
+	}
+}
+
+.ProductName {
+	font-family: $silly;
+	color: $orange;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+	margin: 0.25em;
+	text-align: center;
+}
+
+.ProductPrice {
+	font-family: $default;
+	font-size: 1.2em;
+	font-weight: 300;
+	margin-bottom: 0.5em;
+}
+
+.NavLink {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+}
+
+.BuyNow {
+	background-color: $light-grey;
+	color: black;
+	font-family: $default;
+	font-size: 1em;
+	border: none;
+	border-radius: 10px;
+	width: 80%;
+	margin-bottom: 1em;
+	padding: 10px 0px;
+	&:hover {
+		background-color: $dark-purple;
+		color: white;
+	}
+}

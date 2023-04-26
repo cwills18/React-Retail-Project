@@ -1,0 +1,15 @@
+@import "../../../Styles/variables";
+
+.ItemsFound {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 98%;
+	height: 40px;
+	border-bottom: 1px solid $light-grey;
+	font-family: $default;
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+}

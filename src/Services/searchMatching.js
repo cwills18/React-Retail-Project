@@ -10,7 +10,6 @@ export const foundInName = (searchInput, obj) => {
 };
 
 export const foundInDescription = (searchInput, obj) => {
-	console.log(obj.name);
 	const searchTerms = searchInput.toLowerCase().split(" ");
 	const descriptionArray = obj.description.toLowerCase().split(" ");
 	const result1 = searchTerms.some((search) => descriptionArray.includes(search));

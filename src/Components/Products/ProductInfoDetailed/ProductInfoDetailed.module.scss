@@ -1,0 +1,192 @@
+@import "./../../../Styles/variables.scss";
+
+.DetailsContainer {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	margin: 0em 1em;
+	align-items: flex-start;
+}
+
+.ProductName {
+	color: $orange;
+	font-family: $silly;
+	font-size: 2.5em;
+	letter-spacing: 0.1em;
+	margin-bottom: 0.5em;
+}
+
+.Prices {
+	font-family: $default;
+	font-size: 1.8em;
+	margin-bottom: 1em;
+	display: flex;
+	flex-flow: row nowrap;
+	&_Price {
+		color: black;
+		margin-right: 1em;
+	}
+	&_FullPrice {
+		color: red;
+		text-decoration: line-through;
+		margin-right: 1em;
+	}
+	&_Discount {
+		background-color: red;
+		color: white;
+		padding: 0px 5px;
+	}
+}
+
+.SizeHeader {
+	font-family: $default;
+	font-size: 1.5em;
+	margin-bottom: 0.2em;
+}
+
+.Sizing {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 0.5em 0em;
+	&_CategoriesContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		align-content: center;
+	}
+	&_CategoryRadio {
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		border: 1px solid grey;
+		border-radius: 50%;
+		margin-right: 10px;
+		&:checked {
+			background-color: $orange;
+			background-size: 50%;
+		}
+	}
+	&_Label {
+		margin-right: 15%;
+		font-family: $default;
+		font-size: 1.2em;
+	}
+	&_Dropdown {
+		width: 30%;
+		height: 2em;
+		margin-top: 1em;
+		&_Option {
+			color: black;
+		}
+	}
+}
+
+.AddCartBtn {
+	background-color: $orange;
+	color: black;
+	border: none;
+	border-radius: 10px;
+	width: 100%;
+	padding: 10px 0px;
+	font-family: $default;
+	font-size: 1.2em;
+	font-weight: 800;
+	margin: 2em 0em 1em;
+	align-self: center;
+	&:hover {
+		background-color: $dark-purple;
+		color: white;
+	}
+}
+
+.InCartBtn {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-self: center;
+	width: 100%;
+	margin: 2em 0em 1em;
+	font-family: $default;
+	font-size: 1.2em;
+	font-weight: 800;
+	border: 5px solid $dark-purple;
+	border-radius: 10px;
+	&_Btns {
+		background-color: $dark-purple;
+		color: white;
+		border: none;
+		font-family: $default;
+		font-size: 1.6em;
+		width: 10%;
+		padding: 2px 10px;
+	}
+	&_Quantity {
+		align-self: center;
+		font-size: 1.5em;
+	}
+}
+
+.InStock {
+	width: 100%;
+	text-align: center;
+	font-family: $default;
+	color: $dark-green;
+	margin-bottom: 3em;
+}
+
+.Description {
+	font-family: $default;
+	&_Container {
+		display: flex;
+		flex-direction: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+		background-color: white;
+		border: none;
+		border-top: 1px solid grey;
+		border-bottom: 1px solid grey;
+		width: 100%;
+	}
+	&_Label {
+		font-weight: 800;
+		font-size: 1.2em;
+		font-family: $default;
+		padding: 20px;
+	}
+	&_ArrowDown {
+		font-size: 1.8em;
+		font-weight: 800;
+		padding: 20px;
+		position: relative;
+		bottom: 8px;
+	}
+	&_ArrowUp {
+		font-size: 1.4em;
+		font-weight: 700;
+		padding: 20px;
+		position: relative;
+		top: 3px;
+	}
+	&_Modal {
+		&_Container {
+			background-color: white;
+			padding: 20px;
+		}
+		&_Description {
+			font-family: $default;
+			font-size: 1em;
+			line-height: 1.1em;
+			margin-bottom: 2em;
+		}
+		&_MaterialLabel {
+			font-family: $default;
+			font-size: 0.9em;
+			font-weight: 800;
+			margin-bottom: 0.2em;
+		}
+		&_Material {
+			font-family: $default;
+		}
+	}
+}

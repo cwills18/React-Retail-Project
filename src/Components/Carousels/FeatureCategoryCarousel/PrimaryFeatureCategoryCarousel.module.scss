@@ -1,0 +1,69 @@
+@import "./../../../Styles/variables.scss";
+
+.PrimaryFeaturedCategory {
+	width: 100%;
+	height: 550px;
+	display: flex;
+	flex-direction: column;
+	padding: 2em 0em;
+	background-color: $dark-purple;
+	&_Secondary {
+		background-color: white;
+	}
+}
+
+.Heading {
+	font-family: $silly;
+	color: white;
+	letter-spacing: 0.1em;
+	margin-left: 5%;
+	margin-bottom: 0.5em;
+	&_Secondary {
+		color: $green;
+	}
+}
+
+.Carousel {
+	width: 90%;
+	align-self: center;
+	&_Slide {
+		width: 18%;
+		height: 100%;
+		margin: 10px;
+	}
+	&_CardHolder {
+		width: 100%;
+		justify-content: center;
+	}
+	&_ProductCard {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	&_Buttons {
+		position: relative;
+		z-index: 1;
+		font-size: 6em;
+		font-family: $default;
+		color: white;
+		border: none;
+		background-color: transparent;
+		&:hover {
+			color: $purple;
+		}
+		&:disabled {
+			color: $dark-purple;
+		}
+		&_Back {
+			right: 3vw;
+			bottom: 40vh;
+		}
+		&_Next {
+			left: 89vw;
+			bottom: 40vh;
+		}
+		&_Secondary {
+			color: $green;
+		}
+	}
+}

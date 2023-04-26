@@ -1,0 +1,14 @@
+@import "./../../../Styles/variables.scss";
+
+.ProductGridContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.NothingFound {
+	margin: 2em;
+	font-family: $default;
+	font-size: 1.2em;
+}

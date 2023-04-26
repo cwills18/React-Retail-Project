@@ -1,0 +1,101 @@
+@import "./../../../Styles/variables.scss";
+
+.CheckoutSummary {
+	background-color: $light-grey;
+	color: black;
+	font-family: $default;
+	position: absolute;
+	top: 0.5em;
+	right: 80px;
+	width: 25%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Heading {
+	width: 90%;
+	padding: 20px 0px 15px;
+	font-size: 1.3em;
+	border-bottom: 1px solid black;
+}
+
+.Subtotal {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+	font-size: 1.1em;
+	&_Label {
+		margin: 10px 0px;
+	}
+	&_Price {
+		margin: 10px 0px;
+		font-weight: 800;
+	}
+}
+
+.Savings {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+	font-size: 1.1em;
+	&_Label {
+		margin: 0px 0px 10px;
+	}
+	&_Price {
+		margin: 0px 0px 10px;
+		font-weight: 800;
+	}
+}
+
+.Shipping {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+	font-size: 1.1em;
+	border-bottom: 1px solid black;
+	&_Label {
+		margin: 0px 0px 10px;
+	}
+	&_Price {
+		margin: 0px 0px 10px;
+		font-weight: 800;
+	}
+}
+
+.Total {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+	font-size: 1.3em;
+	font-weight: 800;
+	&_Label {
+		margin: 10px 0px 10px;
+	}
+	&_Price {
+		margin: 10px 0px 10px;
+		font-weight: 800;
+	}
+}
+
+.ContinueToCheckout {
+	background-color: $dark-purple;
+	color: white;
+	width: 100%;
+	border-radius: 0px 0px 10px 10px;
+	text-align: center;
+	font-size: 1.4em;
+	font-family: $default;
+	font-weight: 800;
+	letter-spacing: 0.05em;
+	padding: 15px 0px;
+}
+
+.NavLink {
+	width: 100%;
+}

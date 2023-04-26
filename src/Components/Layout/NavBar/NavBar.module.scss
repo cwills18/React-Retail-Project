@@ -1,0 +1,76 @@
+@import "./../../../Styles/variables.scss";
+
+a {
+	text-decoration: none;
+}
+
+.NavHolder {
+	width: 100%;
+}
+
+.DesktopNav {
+	background-color: $green;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 0.5em 0.7em 0.6em;
+	&_Tabs {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		&_Img {
+			height: 40px;
+		}
+		&_TextLink {
+			text-decoration: none;
+			font-family: $silly;
+			font-weight: 500;
+			font-size: 1.4em;
+			color: white;
+			margin: 0em 2em;
+		}
+	}
+	&_SearchContainer {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		margin: 0em 1em;
+	}
+	&_SavedItems {
+		color: white;
+		text-decoration: none;
+		font-size: 2em;
+		padding-left: 0.5em;
+		position: relative;
+		top: 2px;
+	}
+	&_CartContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		align-items: center;
+		padding-left: 1em;
+		height: 100%;
+		&_Default {
+			display: none;
+		}
+		&_Num {
+			background-color: $purple;
+			color: white;
+			padding: 5px;
+			min-width: 15px;
+			border-radius: 50%;
+			font-family: $default;
+			font-weight: 800;
+			font-size: 0.8em;
+			align-self: first baseline;
+			text-align: center;
+		}
+		&_Img {
+			height: 35px;
+			align-self: flex-end;
+			padding-bottom: 3px;
+		}
+	}
+}
