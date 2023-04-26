@@ -13,6 +13,7 @@ The current features that have been developed for this project include:
 - Various functions for formatting prices and strings into sentence case for consistency.
 
 Improvements that still need to be made:
+- Responsivity needs to be added.
 - There is currently a bug with one of the functions causing an error in firebase somewhere when the homepage loads. I have not yet located the cause of this error, or figured out if it is impacting the user interface. 
 - Currently there is no feedback given to the user when the products they have in their cart have reached the maximum limit of available stock. While there is code in place to stop them adding more to the cart at this point, I would also like to add something that says "Maximum items reached" or something along those lines.
 - Currently the user cannot add to saved items from within the detailed product page. Would like to add this functionality also.
