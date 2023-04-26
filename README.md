@@ -5,9 +5,9 @@ This website is a work-in-progress implementation of a retail website made with 
 The current features that have been developed for this project include:
 - A Firebase database of products, as well as an additional database for users (although currently the webpage is set to function with a specific user ID only, which is loaded on mount of the homepage).
 - A basic user interface with Home, Shop, Saved Items and Checkout pages, as well as a detailed page on each product where uesrs can select sizes before adding to the cart.
-- A working search bar component which returns results that contain the search terms in their name, description, colours or categories.
 - A working cart mechanism that stores and updates key values like prices and quantities for different sizes locally first (for quicker updating of the user interface), and then sends updates to the user's cart in Firebase.
 - Stock quantities are updated as the user adds and removes items from the cart.
+- A working search bar component which returns results that contain the search terms in their name, description, colours or categories.
 - Two different React carousels on the home page.
 - Functionality for users to save products by clicking the star on the product image, and then accessing their saved items through the star icon in the navbar. These items are also saved as favourites to the user in Firebase.
 - Various functions for formatting prices and strings into sentence case for consistency.
