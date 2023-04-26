@@ -12,10 +12,11 @@ The current features that have been developed for this project include:
 - Functionality for users to save products by clicking the star on the product image, and then accessing their saved items through the star icon in the navbar. These items are also saved as favourites to the user in Firebase.
 - Various functions for formatting prices and strings into sentence case for consistency.
 
-Improvements that still need to be made:
+Examples of some improvements that still need to be made:
 - Responsivity needs to be added.
 - There is currently a bug with one of the functions causing an error in firebase somewhere when the homepage loads. I have not yet located the cause of this error, or figured out if it is impacting the user interface. 
 - Currently there is no feedback given to the user when the products they have in their cart have reached the maximum limit of available stock. While there is code in place to stop them adding more to the cart at this point, I would also like to add something that says "Maximum items reached" or something along those lines.
 - Currently the user cannot add to saved items from within the detailed product page. Would like to add this functionality also.
 - Functions that communicate with the databases potentially need some refactoring. Currently the functions are a bit long and at times are repeating steps (like checking if an item is in the cart). If I had more time, I would like to clean up these functions a bit more and potentially make smaller functions that do less.
+- Socks that don't have both adult and kids sizes available are sometimes taking too long to assign the appropriate category to the size, resulting in some socks being sent to the database as "null XL" instead of "adults XL". Need to look at alternatives for this code.
 
