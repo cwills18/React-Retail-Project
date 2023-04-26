@@ -8,9 +8,9 @@ export const getUser = async (userId) => {
 		const id = userId;
 		const restOfData = docSnap.data();
 		return { id, ...restOfData };
-	} else {
+	} /* else {
 		console.log("Something went wrong");
-	}
+	} */
 };
 export const getUserFavourites = async (userObj) => {
 	const docRef = doc(db, "users", userObj.id);
@@ -19,9 +19,9 @@ export const getUserFavourites = async (userObj) => {
 		const data = docSnap.data();
 		const favourites = data.favourites;
 		return favourites;
-	} else {
+	} /* else {
 		console.log("Something went wrong");
-	}
+	} */
 };
 
 export const getUserCartItems = async (userObj) => {
@@ -31,7 +31,7 @@ export const getUserCartItems = async (userObj) => {
 		const data = docSnap.data();
 		const cart = data.inCart;
 		return cart;
-	} else {
+	} /* else {
 		console.log("Something went wrong");
-	}
+	} */
 };

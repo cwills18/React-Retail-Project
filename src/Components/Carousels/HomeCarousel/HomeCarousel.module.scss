@@ -1,0 +1,52 @@
+@import "../../../Styles/variables.scss";
+
+.Carousel {
+	width: 100%;
+	margin-bottom: 1em;
+	&_Slide {
+		position: relative;
+	}
+	&_ImgHolder {
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+		justify-content: center;
+	}
+	&_Img {
+		height: 100%;
+	}
+	&_BackBtn {
+		position: absolute;
+		z-index: 1;
+		top: 32%;
+		left: 5%;
+		font-size: 10em;
+		font-family: $default;
+		color: $green;
+		border: none;
+		background-color: transparent;
+		&:hover {
+			color: $purple;
+		}
+		&:disabled {
+			display: none;
+		}
+	}
+	&_NextBtn {
+		position: absolute;
+		z-index: 1;
+		top: 32%;
+		right: 5%;
+		font-size: 10em;
+		font-family: $default;
+		color: $green;
+		border: none;
+		background-color: transparent;
+		&:hover {
+			color: $purple;
+		}
+		&:disabled {
+			display: none;
+		}
+	}
+}

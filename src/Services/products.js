@@ -19,17 +19,15 @@ export const getProduct = async (productId) => {
 	const docRef = doc(db, "products", productId);
 	const docSnap = await getDoc(docRef);
 	if (docSnap.exists()) {
-		console.log(docSnap.data());
 		return docSnap.data();
-	} else {
+	} /* else {
 		console.log("The document could not be found");
-	}
+	} */
 };
 
 export const stockQuantityAvailable = async (productId) => {
 	const product = await getProduct(productId);
 	const quantity = await product.quantity;
-	console.log("the stock quantity available is", quantity);
 	return quantity;
 };
 

@@ -5,7 +5,6 @@ import { getUser, getUserFavourites } from "./userInformation";
 
 export const toggleFavourite = async (userObj, productObj) => {
 	const isFavourite = await checkIfFavourite(userObj, productObj);
-	console.log(isFavourite);
 	if (isFavourite) {
 		removeFavourite(userObj, productObj);
 	} else {
@@ -15,9 +14,7 @@ export const toggleFavourite = async (userObj, productObj) => {
 
 export const checkIfFavourite = async (userObj, productObj) => {
 	const favourites = await getUserFavourites(userObj);
-	// console.log("current favourites are", favourites);
 	const result = favourites.some((product) => product.id === productObj.id);
-	// console.log("the product is a favourite:", result);
 	return result;
 };
 

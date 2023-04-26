@@ -1,16 +1,15 @@
-import { useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-import HomePage from "./Containers/HomePage/HomePage";
-import ShopPage from "./Containers/ShopPage/ShopPage";
-import ProductPage from "./Containers/ProductPage/ProductPage";
-import CheckoutPage from "./Containers/CheckoutPage/CheckoutPage";
+import HomePage from "./Containers/Pages/HomePage/HomePage";
+import ShopPage from "./Containers/Pages/ShopPage/ShopPage";
+import ProductPage from "./Containers/Pages/ProductPage/ProductPage";
+import SavedItemsPage from "./Containers/Pages/SavedItemsPage/SavedItemsPage";
+import CheckoutPage from "./Containers/Pages/CheckoutPage/CheckoutPage";
+import NotRealCompanyPage from "./Containers/Pages/NotRealCompanyPage/NotRealCompanyPage";
 import SearchProvider from "./Contexts/SearchProvider";
 import ProductsProvider from "./Contexts/ProductsProvider";
 import ShoppingCartProvider from "./Contexts/ShoppingCartProvider";
-import NotRealCompanyPage from "./Containers/NotRealCompanyPage/NotRealCompanyPage";
 import UserProvider from "./Contexts/UserProvider";
-import SavedItemsPage from "./Containers/SavedItemsPage/SavedItemsPage";
 
 function App() {
 	return (

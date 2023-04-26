@@ -4,7 +4,7 @@ export const ProductsContext = createContext();
 
 const ProductsProvider = ({ children }) => {
 	//products is all available products
-	//this will only be called on Shop mount page
+	//this will only be called on Home and/or Shop mount
 	const [products, setProducts] = useState([]);
 
 	const toPass = { products, setProducts };
