@@ -34,7 +34,7 @@ const CheckoutCardHolder = ({ product }) => {
 		setPriceSubtotal((prev) => prev + price);
 		setTotalCartCount((prev) => prev + 1);
 		const newLocalCart = prepareForCartAdd(cartProducts, product, size);
-		console.log("the new local cart is:", newLocalCart);
+		// console.log("the new local cart is:", newLocalCart);
 		setCartProducts(newLocalCart);
 		if (onSale) {
 			//assuming 50% off for now;
