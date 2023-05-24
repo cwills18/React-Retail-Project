@@ -18,7 +18,7 @@ const NavBar = () => {
 			<div className={styles.DesktopNav}>
 				<div className={styles.DesktopNav_Tabs}>
 					<NavLink to={"/"}>
-						<img className={styles.DesktopNav_Tabs_Img} src="src/assets/sillySocksLogo.png" />
+						<img className={styles.DesktopNav_Tabs_Img} src="./src/assets/sillySocksLogo.png" />
 					</NavLink>
 					<NavLink to={"/shop"} className={styles.DesktopNav_Tabs_TextLink} onClick={resetSearch}>
 						SHOP
@@ -33,7 +33,7 @@ const NavBar = () => {
 				<NavLink to="/checkout">
 					<div className={styles.DesktopNav_CartContainer}>
 						{totalCartCount > 0 && <div className={styles.DesktopNav_CartContainer_Num}>{totalCartCount}</div>}
-						<img className={styles.DesktopNav_CartContainer_Img} src="src/assets/shoppingcart.png" />
+						<img className={styles.DesktopNav_CartContainer_Img} src="./src/assets/shoppingcart.png" />
 					</div>
 				</NavLink>
 			</div>

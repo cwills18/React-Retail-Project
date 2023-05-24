@@ -11,7 +11,7 @@ const HomeCarousel = () => {
 					<div className={styles.Carousel_ImgHolder}>
 						<img
 							className={styles.Carousel_Img}
-							src="src/assets/HomeCarousel/christmas.png"
+							src="./src/assets/HomeCarousel/christmas.png"
 							alt="christmas 50% sale"
 						/>
 					</div>
@@ -20,7 +20,7 @@ const HomeCarousel = () => {
 					<div className={styles.Carousel_ImgHolder}>
 						<img
 							className={styles.Carousel_Img}
-							src="src/assets/HomeCarousel/superheroes.png"
+							src="./src/assets/HomeCarousel/superheroes.png"
 							alt="superhero collection"
 						/>
 					</div>
@@ -29,7 +29,7 @@ const HomeCarousel = () => {
 					<div className={styles.Carousel_ImgHolder}>
 						<img
 							className={styles.Carousel_Img}
-							src="src/assets/HomeCarousel/3Danimals.png"
+							src="./src/assets/HomeCarousel/3Danimals.png"
 							alt="new 3D animal collection"
 						/>
 					</div>
