@@ -55,8 +55,6 @@
 
 ## Change logs
 
--   Write a paragraph labelled with the date every day you work on the project to discuss what you've done for the say. Be specific about the changes that have happened for that day.
-
 ### 24/05/2022 - {Bug fixes}
 
 - Fixed bug causing an error in firebase when the homepage loads. This was caused by intiial user state being an object, rather than null.
