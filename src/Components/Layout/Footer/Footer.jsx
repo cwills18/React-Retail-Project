@@ -53,7 +53,7 @@ const Footer = () => {
 			</div>
 			<div className={styles.BottomLine}>
 				<p className={styles.BottomLine_Para}>© 2023 All Rights Reserved</p>
-				<img className={styles.BottomLine_Logo} src="src/assets/sillySocksSingleLinePurple.png" />
+				<img className={styles.BottomLine_Logo} src="./src/assets/sillySocksSingleLinePurple.png" />
 				<div className={styles.BottomLine_SocialMedia}>
 					<NavLink to="/not-a-real-company">
 						<img
