@@ -39,6 +39,9 @@ const HomePage = () => {
 	}, []);
 
 	useEffect(() => {
+		if (!user) {
+			return;
+		}
 		const checkCart = async () => {
 			const cartNum = await getTotalItemsInCart(user);
 			setTotalCartCount(cartNum);

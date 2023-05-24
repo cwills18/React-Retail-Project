@@ -10,15 +10,14 @@ const CheckoutProductGrid = () => {
 	const { user } = useContext(UserContext);
 	const { cartProducts, setCartProducts } = useContext(ShoppingCartContext);
 	// const [sendToCartItems, setSendToCartItems]
-
-	console.log("the cart products are: ", cartProducts);
 	//on mount, make sure that local cart matches cart in database
 	useEffect(() => {
-		const wrapper = async () => {
-			const cart = await getUserCartItems(user);
-			setCartProducts(cart);
-		};
-		wrapper();
+		// const wrapper = async () => {
+		// 	const cart = await getUserCartItems(user);
+		// 	setCartProducts(cart);
+		// };
+		// wrapper();
+		getUserCartItems(user).then((cart) => setCartProducts(cart));
 	}, []);
 
 	useEffect(() => {}, [cartProducts]);

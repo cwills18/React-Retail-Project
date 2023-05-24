@@ -26,6 +26,8 @@ function App() {
 								<Route path="/checkout" element={<CheckoutPage />} />
 								<Route path="/:id" element={<ProductPage />} />
 								<Route path="/not-a-real-company" element={<NotRealCompanyPage />} />
+								{/* doesn't work with HashRouter */}
+								{/* <Route path="*" element={<NotRealCompanyPage />} /> */}
 							</Routes>
 						</HashRouter>
 					</ShoppingCartProvider>

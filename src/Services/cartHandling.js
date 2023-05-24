@@ -8,11 +8,7 @@ export const prepareForCartAdd = (cartArray, productToAdd, sizeToAdd) => {
 	const alreadyInCart = cartArray.find((product) => product.id === productToAdd.id && product.size === sizeToAdd);
 	console.log("already in cart?", alreadyInCart);
 	if (alreadyInCart) {
-		console.log("before update");
-		console.log(alreadyInCart.quantity);
 		alreadyInCart.quantity += 1;
-		console.log("after update");
-		console.log(alreadyInCart.quantity);
 		return cartArray;
 	} else {
 		const newAddition = {
@@ -24,27 +20,19 @@ export const prepareForCartAdd = (cartArray, productToAdd, sizeToAdd) => {
 			size: sizeToAdd,
 			quantity: 1,
 		};
-		console.log("new addition", newAddition);
 		const newCart = [newAddition, ...cartArray];
-		console.log(newCart);
 		return newCart;
 	}
 };
 
 export const prepareForCartRemove = (cartArray, productToAdd, sizeToAdd) => {
 	const alreadyInCart = cartArray.find((product) => product.id === productToAdd.id && product.size === sizeToAdd);
-	console.log("already in cart?", alreadyInCart);
 	const currentQuantity = alreadyInCart.quantity;
-	console.log("current quantity is", currentQuantity);
 	if (currentQuantity > 1) {
-		console.log("before update");
 		alreadyInCart.quantity -= 1;
-		console.log("after update");
-		console.log(alreadyInCart.quantity);
 		return cartArray;
 	} else {
 		const updatedCartArray = cartArray.filter((product) => !(product.id === productToAdd.id && product.size === sizeToAdd));
-		console.log(updatedCartArray);
 		return updatedCartArray;
 	}
 };
@@ -148,4 +136,16 @@ export const getTotalCartSum = async (userObj) => {
 	});
 	const subtotal = pricesForEachType.reduce((acc, next) => (acc += next), 0);
 	return subtotal;
+};
+
+export const calculateSavings = async (userObj) => {
+	const cart = await getUserCartItems(userObj);
+	const deals = cart.filter((item) => item.onSale === true);
+	const dealAmounts = [];
+	deals.forEach((item) => {
+		const thisSaving = item.price * 1 * item.quantity;
+		dealAmounts.push(thisSaving);
+	});
+	const savings = dealAmounts.reduce((acc, next) => (acc += next), 0);
+	return savings;
 };
