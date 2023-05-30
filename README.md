@@ -3,7 +3,7 @@
 
 ## Demo & Snippets
 
--   Include hosted link
+https://cwills18.github.io/React-Retail-Project/
 
 ---
 
@@ -37,6 +37,7 @@
 
 ## Known issues
 
+-  Pictures are currently not showing on the production page. Trying to investigate this issue.
 -  Responsivity needs to be added.
 - Currently there is no feedback given to the user when the products they have in their cart have reached the maximum limit of available stock. While there is code in place to stop them adding more to the cart at this point, I would also like to add something that says "Maximum items reached" or something along those lines.
 - Currently the user cannot add to saved items from within the detailed product page. Would like to add this functionality also.
